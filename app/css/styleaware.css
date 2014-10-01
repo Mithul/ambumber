@@ -1,0 +1,120 @@
+.da-thumbs {
+	list-style: none;
+	width: 984px;
+	height: 600px;
+	position: relative;
+	margin: 20px auto;
+	padding: 0;
+	top:0px; left:-200px;
+}
+.da-thumbs li {
+	width:300px; height:300px;
+	float: left;
+	margin: 5px;
+	background: rgba(255,255,255,0.4);
+	position: relative;
+	border-radius:50%;
+	}
+.da-thumbs li a,
+.da-thumbs li a img {
+	border-radius:50%;
+	width:100%; height:100%;
+	display: block;
+	position: relative;
+border:3px solid rgba(255,255,255,0.8);
+-webkit-animation:border-anim 5s linear infinite;
+-moz-animation:border-anim 5s linear infinite;
+-o-animation:border-anim 5s linear infinite;
+-ms-animation:border-anim 5s linear infinite;
+animation:border-anim 5s linear infinite;
+}
+@-webkit-keyframes border-anim{
+0%{
+	border:3px solid white;
+}
+20%{
+	border-top:3px solid orange;
+}
+40%{
+	border-left: 3px solid orange;
+}
+60%{
+	border-right:3px solid orange;
+}
+80%{
+	border-bottom: 3px solid orange;
+}
+100%{
+	border:3px solid white;
+}
+}
+@-moz-keyframes border-anim{
+0%{
+	border:3px solid white;
+}
+20%{
+	border-top:3px solid orange;
+}
+40%{
+	border-left: 3px solid orange;
+}
+60%{
+	border-right:3px solid orange;
+}
+80%{
+	border-bottom: 3px solid orange;
+}
+100%{
+	border:3px solid white;
+}
+}
+
+.da-thumbs li a {
+	overflow: hidden;
+color:#ffff33;
+font-family:Bangers;
+font-size:20px;
+letter-spacing:2.5px;
+text-align:center;
+text-decoration: none;
+}
+.da-thumbs li a div {
+	border-radius:50%;
+	position: absolute;
+	background: #333;
+	background: rgba(200,0,255,0.35);
+	width: 100%;
+	height: 100%;
+font-family:Bangers;
+font-size:25px;
+letter-spacing:2.5px;
+color:white;
+}
+.da-thumbs li a div span {
+	display: block;
+	padding: 10px 0;
+	margin: 40px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: rgba(255,255,255,0.9);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border-bottom: 2px solid #ffcc00;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+font-family:Rancho;
+font-size:18px;
+letter-spacing:2.5px;
+color:white;
+font-weight:bold;
+text-align: center;
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+-o-transition:all 0.3s;
+-ms-transition:all 0.3s;
+transition:all 0.3s;
+
+}
+.da-thumbs li a div span:hover{
+	color:white;
+	background:rgba(255,80,0,0.5);
+
+}

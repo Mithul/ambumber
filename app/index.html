@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+<meta charset="utf-8">
+<title>Kurukshetra '15 | The Battle of Brains'</title>
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/3dnavbar.css">
+
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="js/app.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/services.js"></script>
+<script src="js/meny.js"></script>
+<script src="js/3dsub.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+		var url = window.location.href;
+
+		$('#sidebar').hide();
+		$('#sidearrow').hide();
+		if(url.indexOf('events')>-1)
+		{
+			$('#sidebar').show();
+			$('#sidearrow').show();
+		}
+		$('#eventslink').click(function(){
+			$('#sidebar').show();
+			$('#sidearrow').show();
+			});
+		$('#homelink').click(function(){
+			$('#sidebar').hide();
+			$('#sidearrow').hide();
+			});
+
+		});
+
+$('#cssmenu > ul > li > a').click(function() {
+  $('#cssmenu li').removeClass('active');
+  $(this).closest('li').addClass('active');	
+  var checkElement = $(this).next();
+  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+    $(this).closest('li').removeClass('active');
+    checkElement.slideUp('normal');
+  }
+  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+    $('#cssmenu ul ul:visible').slideUp('normal');
+    checkElement.slideDown('normal');
+  }
+  if($(this).closest('li').find('ul').children().length == 0) {
+    return true;
+  } else {
+    return false;	
+  }		
+  });
+});
+</script>
+</head>
+ <body style="">
+<div class="meny" id="sidebar" ng-app="phonecatApp" ng-controller="EventsCtrl">
+	<h2>Navigation</h2>
+<div id='cssmenu' >
+		<ul >
+
+			<li class='active'><a class="id1" href="#" >Engineering</a>
+			<ul class="meny1">
+				<li><a href='SubEvents.html'><span>Contraptions</span></a></li>
+				<li><a href=''><span>God Speed</span></a></li><li><a href='#'><span>
+						Energise</span></a></li>
+				<li><a href='#'><span>Megastructures</span></a></li><li><a href='#'><span>Electro Warriors</span></a></li>
+				<li><a href='#'><span>Tcs Innovate</span></a></li><li><a href='#'><span>Aeromodelling</span></a></li>
+				<li><a href='#'><span>Simply Circuits</span></a></li>
+				<li class='last'><a href='#'><span>Paper Presentation</span></a></li>
+			</ul></li>
+			<li class='active'><a class="id1" href="#">Coding</a>
+			<ul class="meny1">
+				<li><a href='#'><span>On Site</span></a></li>
+				<li><a href='#'><span>Heptatholn</span></a></li><li><a href='#'><span>
+						Energise</span></a></li>
+				<li><a href='#'><span>Wizards of FOSS</span></a></li><li><a href='#'><span>Electro Warriors</span></a></li>
+				<li><a href='#'><span>Soft Coding</span></a></li><li><a href='#'><span>Aeromodelling</span></a></li>
+				<li class='last'><a href='#'><span>Hackathon</span></a></li>
+			</ul></li>
+			<li class='active'><a class="id1" href="#">Management</a>
+			<ul class="meny1">
+				<li><a href='#'><span>Enterpreneur</span></a></li>
+				<li><a href='#'><span>Choas Theory</span></a></li><li><a href='#'><span>
+						Energise</span></a></li>
+				<li><a href='#'><span>K! Idol</span></a></li>
+				<li class='last'><a href='#'><span>Marketing</span></a></li>
+			</ul></li>
+			<li class='active'><a class="id1" href="#">Quizzes</a>
+			<ul class="meny1">
+				<li><a href='#'><span>Sci-Tech Quiz</span></a></li>
+				<li><a href='#'><span>Biz Quiz</span></a></li><li><a href='#'><span>
+						How Stuff Work</span></a></li>
+				<li><a href='#'><span>School Quiz</span></a>
+				<li class='last'><a href='#'><span>Open Quiz</span></a></li>
+			</ul></li>
+
+			<li class='active'><a class="id1" href="#">Online</a>
+			<ul class="meny1">
+				<li><a href='#'><span>Online</span></a></li>
+				<li><a href='#'><span>Sphnix</span></a></li><li><a href='#'><span>
+						Cerebra</span></a></li>
+				<li><a href='#'><span>Sherlock</span></a>
+				<li class='last'><a href='#'><span>Online Programming</span></a></li>
+			</ul></li>
+			<li class='active'><a class="id1" href="#">Robotics</a>
+			<ul class="meny1">
+				<li><a href='#'><span>Angry Bots</span></a></li>
+				<li><a href='#'><span>Robo Wars</span></a></li><li><a href='#'><span>
+						Cerebra</span></a></li>
+				<li><a href='#'><span>Crisis</span></a>
+				<li class='last'><a href='#'><span>Pac Bots</span></a></li>
+			</ul></li>
+			<li class='active'><a class="id1" href="#">General</a>
+			<ul class="meny1">
+				<li><a href='#'><span>Alcatraz</span></a></li>
+				<li><a href='#'><span>Math Modelling</span></a></li><li><a href='#'><span>
+						Cerebra</span></a></li>
+				<li class='last'><a href='#'><span>Nation K!now</span></a></li>
+			</ul></li>
+		</ul>
+	</div >
+	</div>
+
+<div class="meny-arrow" id="sidearrow">
+	<div class="meny-left"></div>
+</div>
+<div class="contents">
+	<header>
+		<div class="row">
+			<img src="images/ceg.png" height=50px width=200px style="margin-top:-40px;margin-left:40px">
+			<img  src="images/k15.png" height=120px width=450px style="margin-top:-30px; margin-left:180px;">
+			<img src="images/unesco.png" height=100px width=230px style="margin-top:-40px;margin-left:150px;">
+		</div>
+	</header>
+	<div class="main-div">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-9">
+				<div class="view-container">
+					<div ng-view class="view-frame"></div>
+				</div>
+
+			</div>
+			<div class="col-md-2">
+				<button class="btn-success login-button">Join Us</button>
+				<div class="k-mascot">
+					<img src="images/kmascot.png" height=300px width=180px class="mascot">
+				</div>
+				<div class="archives">
+					<ul class="nav nav-stacked">
+						<li>
+
+						<a href="#">Archives</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ctf-logo">
+					<img src="images/ctf.png" height=50px width=180px class="ctf-logo">
+				</div>
+				<div class="social-media">
+					<a href="http://facebook.com/kurukshetra.org.in" target="_blank"><img src="images/facebook.png" height=40px width=40px></a>
+					<a href="http://twitter.com/kurukshetra_ceg" target="_blank" ><img src="images/twitter.png" height=40px width=40px></a>
+					<a href="http://youtube.com/user/kurukshetramedia" target="_blank" ><img src="images/youtube.png" height=40px width=40px></a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="dock_div">
+
+		<div class="dock_left"></div>
+		<div class="dock">
+			<ul>
+				<li><a id="homelink" href="#/" data-title="Home"><img src="images/home.png" alt="Home"></a></li>
+				<li><a id="eventslink" href="#/events" data-title="Events"><img src="images/events.png" alt="Home"></a></li>
+				<li><a href="Workshops.html" data-title="Workshops"><img src="images/workshops.png" alt="" ></a></li>
+				<li><a href="#" data-title="Guest Lectures"><img src="images/lecture.png" alt="Lectures"></a></li>
+				<li><a href="#" data-title="Webcasts"><img src="images/webcast.png" alt="Webcast"></a></li>
+				<li><a href="#" data-title="Sponsors"><img src="images/sponsor.png" alt="Sponsor"></a></li>
+				<li><a href="#" data-title="K!arnival"><img src="images/karnival.png" alt="Karnival"></a></li>
+				<li><a href="#" data-title="XCEED"><img src="images/xceed.png" alt="Xceed"></a></li>
+				<li><a href="#" data-title="Hospitality"><img src="images/hospi.png" alt="Hospitality"></a></li>
+				<li><a href="#" data-title="Social Initiative"><img src="images/initiative.png" alt="Initiative"></a></li>
+				<li><a href="#" data-title="Schedule"><img src="images/schedule.png" alt="Schedule"></a></li>
+			</ul>
+		</div>
+		<div class="dock_right"></div>
+	</div>
+</div>
+
+<script src="js/3dmenu.js"></script>
+</body>
+</html>
