@@ -27,12 +27,16 @@ $(document).ready(function(){
 
 		$('#sidebar').hide();
 		$('#sidearrow').hide();
-		if(url.indexOf('events')>-1)
+		if(url.indexOf('events')>-1 || url.indexOf('workshops')>-1)
 		{
-			$('#sidebar').show();
-			$('#sidearrow').show();
+		$('#sidebar').show();
+		$('#sidearrow').show();
 		}
 		$('#eventslink').click(function(){
+			$('#sidebar').show();
+			$('#sidearrow').show();
+			});
+		$('#workshopslink').click(function(){
 			$('#sidebar').show();
 			$('#sidearrow').show();
 			});
@@ -41,97 +45,67 @@ $(document).ready(function(){
 			$('#sidearrow').hide();
 			});
 
-		});
 
-$('#cssmenu > ul > li > a').click(function() {
-  $('#cssmenu li').removeClass('active');
-  $(this).closest('li').addClass('active');	
-  var checkElement = $(this).next();
-  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-    $(this).closest('li').removeClass('active');
-    checkElement.slideUp('normal');
-  }
-  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-    $('#cssmenu ul ul:visible').slideUp('normal');
-    checkElement.slideDown('normal');
-  }
-  if($(this).closest('li').find('ul').children().length == 0) {
-    return true;
-  } else {
-    return false;	
-  }		
-  });
+		$(document).on("click",'#cssmenu > ul > li > a',function() {
+			$('#cssmenu li').removeClass('active');
+			$(this).closest('li').addClass('active');	
+			var checkElement = $(this).next();
+			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			$(this).closest(' li').removeClass('active');
+			checkElement.slideUp('normal');
+			}
+			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+			$('#cssmenu ul ul:visible').slideUp('normal');
+			checkElement.slideDown('normal');
+			}
+			if($(this).closest('li').find('ul').children().length == 0) {
+			return true;
+			} else {
+			return false;	
+			}		
+			});
 });
 </script>
+<script type="text/javascript">
+
+$(window).load(function() {
+		$(".loader").fadeOut("slow");
+		})
+
+</script>
 </head>
- <body style="">
-<div class="meny" id="sidebar" ng-app="phonecatApp" ng-controller="EventsCtrl">
+<body style="" >
+<div class="loader" style="background-color:black">
+
+	<div id="row xs-2">
+		<p style="text-align:center;">
+		<img src = "images/k15.png" style="width:60%;height:12%" style="vertical-align:middle">
+
+		<br/><br/>
+		<!--<img src="./assets/img/spin.GIF" style="vertical-align:middle">-->
+
+		<br/><br/>
+
+		<span style="color:white">Loading..</span>
+		</p>
+	</div>
+</div>
+<div class="meny" id="sidebar" ng-controller="EventsCtrl">
+	<div ng-repeat="events in eventslist" >
 	<h2>Navigation</h2>
-<div id='cssmenu' >
-		<ul >
-
-			<li class='active'><a class="id1" href="#" >Engineering</a>
-			<ul class="meny1">
-				<li><a href='SubEvents.html'><span>Contraptions</span></a></li>
-				<li><a href=''><span>God Speed</span></a></li><li><a href='#'><span>
-						Energise</span></a></li>
-				<li><a href='#'><span>Megastructures</span></a></li><li><a href='#'><span>Electro Warriors</span></a></li>
-				<li><a href='#'><span>Tcs Innovate</span></a></li><li><a href='#'><span>Aeromodelling</span></a></li>
-				<li><a href='#'><span>Simply Circuits</span></a></li>
-				<li class='last'><a href='#'><span>Paper Presentation</span></a></li>
-			</ul></li>
-			<li class='active'><a class="id1" href="#">Coding</a>
-			<ul class="meny1">
-				<li><a href='#'><span>On Site</span></a></li>
-				<li><a href='#'><span>Heptatholn</span></a></li><li><a href='#'><span>
-						Energise</span></a></li>
-				<li><a href='#'><span>Wizards of FOSS</span></a></li><li><a href='#'><span>Electro Warriors</span></a></li>
-				<li><a href='#'><span>Soft Coding</span></a></li><li><a href='#'><span>Aeromodelling</span></a></li>
-				<li class='last'><a href='#'><span>Hackathon</span></a></li>
-			</ul></li>
-			<li class='active'><a class="id1" href="#">Management</a>
-			<ul class="meny1">
-				<li><a href='#'><span>Enterpreneur</span></a></li>
-				<li><a href='#'><span>Choas Theory</span></a></li><li><a href='#'><span>
-						Energise</span></a></li>
-				<li><a href='#'><span>K! Idol</span></a></li>
-				<li class='last'><a href='#'><span>Marketing</span></a></li>
-			</ul></li>
-			<li class='active'><a class="id1" href="#">Quizzes</a>
-			<ul class="meny1">
-				<li><a href='#'><span>Sci-Tech Quiz</span></a></li>
-				<li><a href='#'><span>Biz Quiz</span></a></li><li><a href='#'><span>
-						How Stuff Work</span></a></li>
-				<li><a href='#'><span>School Quiz</span></a>
-				<li class='last'><a href='#'><span>Open Quiz</span></a></li>
-			</ul></li>
-
-			<li class='active'><a class="id1" href="#">Online</a>
-			<ul class="meny1">
-				<li><a href='#'><span>Online</span></a></li>
-				<li><a href='#'><span>Sphnix</span></a></li><li><a href='#'><span>
-						Cerebra</span></a></li>
-				<li><a href='#'><span>Sherlock</span></a>
-				<li class='last'><a href='#'><span>Online Programming</span></a></li>
-			</ul></li>
-			<li class='active'><a class="id1" href="#">Robotics</a>
-			<ul class="meny1">
-				<li><a href='#'><span>Angry Bots</span></a></li>
-				<li><a href='#'><span>Robo Wars</span></a></li><li><a href='#'><span>
-						Cerebra</span></a></li>
-				<li><a href='#'><span>Crisis</span></a>
-				<li class='last'><a href='#'><span>Pac Bots</span></a></li>
-			</ul></li>
-			<li class='active'><a class="id1" href="#">General</a>
-			<ul class="meny1">
-				<li><a href='#'><span>Alcatraz</span></a></li>
-				<li><a href='#'><span>Math Modelling</span></a></li><li><a href='#'><span>
-						Cerebra</span></a></li>
-				<li class='last'><a href='#'><span>Nation K!now</span></a></li>
-			</ul></li>
+	<div id='cssmenu' >
+		<ul ng-repeat="category in events">
+			
+			<li class='active'><a class="id1" href="javascript:void(0)" >{{ category.name }}</a>
+			
+			<ul class="meny1" ng-repeat="hello in category">
+				<li ng-repeat="event in hello track by $index"><a href='#'><span>{{event.name}}</span></a></li>
+			</ul>
+			</li>
 		</ul>
 	</div >
-	</div>
+</div>
+</div>
 
 <div class="meny-arrow" id="sidearrow">
 	<div class="meny-left"></div>
@@ -187,7 +161,7 @@ $('#cssmenu > ul > li > a').click(function() {
 			<ul>
 				<li><a id="homelink" href="#/" data-title="Home"><img src="images/home.png" alt="Home"></a></li>
 				<li><a id="eventslink" href="#/events" data-title="Events"><img src="images/events.png" alt="Home"></a></li>
-				<li><a href="Workshops.html" data-title="Workshops"><img src="images/workshops.png" alt="" ></a></li>
+				<li><a id="workshopslink" href="#/workshops" data-title="Workshops"><img src="images/workshops.png" alt="" ></a></li>
 				<li><a href="#" data-title="Guest Lectures"><img src="images/lecture.png" alt="Lectures"></a></li>
 				<li><a href="#" data-title="Webcasts"><img src="images/webcast.png" alt="Webcast"></a></li>
 				<li><a href="#" data-title="Sponsors"><img src="images/sponsor.png" alt="Sponsor"></a></li>

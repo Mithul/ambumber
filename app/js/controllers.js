@@ -22,13 +22,17 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
   }]);
 
 
-phonecatControllers.controller('EventsCtrl',function($scope,$http){
-	$http.get('http://cms.kurukshetra.org.in/events.json').
+phonecatControllers.controller('EventsCtrl',function($scope,$http,$location){
+	var url= $location.path().replace("/","");
+	
+	var loc="http://cms.kurukshetra.org.in/"+url+".json";
+	console.log(loc);
+	$http.get(loc).
 	success(function(data,status){
-		$scope.events = data;
-		console.log($scope.events);
+		$scope.eventslist = data;
 	}).
 	error(function(data,status){
 		console.log(data);
 	});
+	
 });

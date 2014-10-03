@@ -16,15 +16,16 @@ phonecatApp.config(['$routeProvider',
     $routeProvider.
       when('/', {
         templateUrl: 'partials/home.html',
-        controller: 'EventsCtrl'
+        controller: 'EventsCtrl',
+	      title: "Events"
       }).
       when('/events', {
         templateUrl: 'partials/events.html',
         controller: 'EventsCtrl'
       }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
+      when('/workshops', {
+        templateUrl: 'partials/workshops.html',
+        controller: 'EventsCtrl'
       }).
       otherwise({
         redirectTo: '/'
