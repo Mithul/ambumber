@@ -27,6 +27,9 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/workshops.html',
         controller: 'EventsCtrl'
       }).
+      when('/events/hello', {
+        templateUrl: 'partials/event.html',
+      }).
       otherwise({
         redirectTo: '/'
       });

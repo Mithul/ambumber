@@ -6318,7 +6318,9 @@ margin: -18px;
 .dock_div{
 	position:fixed;
 	left:0%;
-	bottom:2%;
+	width:100%;
+	top:580px;
+	z-index:10;
 }
 body{
 	background:#fff;
@@ -6351,4 +6353,117 @@ a[data-title]:hover:before{
 	left: 55%;
 	position: absolute;
 	z-index: 99;
+}
+.navbar{
+position:relative;
+width:100%;
+height:100%;
+background-color:#fff;
+border:1px dotted black;
+}
+.navbar ul li{
+width:100%; height:40px;
+background:rgba(255,255,255,0.1);
+display:block;
+list-style:none;
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+transition:all 0.3s;
+cursor:pointer;
+margin-left:100px;
+}
+.navbar ul li a{
+font-family:Covered By Your Grace;
+font-size:1.0em;
+color:#000;
+text-shadow:0.5px 0.3px 0.3px rgba(255,255,255,0.3);
+text-decoration:none;
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+transition:all 0.3s;
+margin-left:-40px;
+}
+.navbar ul li a:hover{
+color:rgba(250,0,50,0.89);
+}
+.navbar ul li .circle{
+position:relative;
+/*left:90px;*/
+top:-30px;
+background:rgba(140,0,255,1);
+border:2px dotted black;
+-webkit-box-shadow:2px 3px 3px rgba(0,0,0,0.4);
+box-shadow:2px 3px 3px rgba(0,0,0,0.4);
+-moz-box-shadow:2px 3px 3px rgba(0,0,0,0.4);
+width:15px; height:15px;
+border-radius:50%;
+-webkit-transition:all 0.5s;
+-moz-transition:all 0.5s;
+transition:all 0.5s;
+}
+.navbar ul li:hover .circle{
+-webkit-animation:lights 1s linear infinite;
+-moz-animation:lights 1s linear infinite;
+animation:lights 1s linear infinite;
+}
+
+.navbar ul li:hover a{
+background-color:rgba(0,100,100,0.05);
+border-radius:20px/10px;
+width:100%; height:100%;
+box-shadow:2px 5px 10px rgba(0,0,0,0.3);
+padding:8px;
+}
+.circle::after{
+content:'';
+width:100px; height:100px;
+position:absolute;
+width:10px; height:10px;
+left:2.4px; top:2.4px;
+background:black;
+border-radius:50%;
+}
+
+.navbar ul li .big-circle{
+width:100px; height:100px;
+background-color:rgba(0,0,0,0.1);
+box-shadow:inset 0 0 0 20px rgba(0,200,100,0.4);
+border-radius:50%;
+position:relative;
+left:20px;
+border:3px dotted rgba(200,40,0,0.8);
+z-index:2;
+margin-top:60px;
+}
+
+
+@-webkit-keyframes lights{
+	50%{ background:red;}
+	75%{background:orange;}
+	100%{background:rgba(140,0,255,1);}
+} 
+
+@-moz-keyframes lights{
+	50%{ background:red;}
+	75%{background:orange;}
+	100%{background:rgba(140,0,255,1);}
+} 
+
+.navbar ul li .circle .join{
+position:absolute;
+left:7px; top:10px;
+width:0.05px; height:40px;
+border:1px dashed black;
+}
+
+.navbar ul li .circle .join-half{
+position:absolute;
+left:-165px; top:16px;
+width:170px; height:145px;
+border-radius:300px 0 0 300px;
+border-left:8px dashed black;
+border-top:1px dashed black;
+border-bottom:1px dashed black;
+background:rgba(0,0,0,0.01);
+z-index:-1;
 }

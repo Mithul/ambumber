@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/3dnavbar.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+
 
 <script src="bower_components/jquery/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
@@ -21,90 +24,90 @@
 <script src="js/services.js"></script>
 <script src="js/meny.js"></script>
 <script src="js/3dsub.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 		var url = window.location.href;
-
-		$('#sidebar').hide();
-		$('#sidearrow').hide();
-		if(url.indexOf('events')>-1 || url.indexOf('workshops')>-1)
+		var localurl='http://localhost:8000/app/'
+		if(url.indexOf('events')>-1)
 		{
-		$('#sidebar').show();
-		$('#sidearrow').show();
+		$('#sidebar').load('partials/events_side.html');
+		}
+		else if(url.indexOf('workshops')>-1)
+		{
+		$('#sidebar').load('partials/workshops_side.html');
+		}
+		else{
+		$('#sidebar').load('partials/quicklinks.html')
 		}
 		$('#eventslink').click(function(){
-			$('#sidebar').show();
-			$('#sidearrow').show();
+			$('#sidebar').load('partials/events_side.html');
+			});
+		$(document).on('click','#eventlink',function(){
+			console.log("Event Link");
+			$('#sidebar').load('partials/events_side.html');
 			});
 		$('#workshopslink').click(function(){
-			$('#sidebar').show();
-			$('#sidearrow').show();
-			});
+				$('#sidebar').load('partials/workshops_side.html');
+				});
+		$(document).on('click','#workshoplink',function(){
+				console.log("Event Link");
+				$('#sidebar').load('partials/workshops_side.html');
+				});
 		$('#homelink').click(function(){
-			$('#sidebar').hide();
-			$('#sidearrow').hide();
-			});
+				$('#sidebar').load('partials/quicklinks.html');
+				});
 
 
 		$(document).on("click",'#cssmenu > ul > li > a',function() {
-			$('#cssmenu li').removeClass('active');
-			$(this).closest('li').addClass('active');	
-			var checkElement = $(this).next();
-			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-			$(this).closest(' li').removeClass('active');
-			checkElement.slideUp('normal');
-			}
-			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-			$('#cssmenu ul ul:visible').slideUp('normal');
-			checkElement.slideDown('normal');
-			}
-			if($(this).closest('li').find('ul').children().length == 0) {
-			return true;
-			} else {
-			return false;	
-			}		
-			});
+				$('#cssmenu li').removeClass('active');
+				$(this).closest('li').addClass('active');	
+				var checkElement = $(this).next();
+				if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+				$(this).closest(' li').removeClass('active');
+				checkElement.slideUp('normal');
+				}
+				if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+				$('#cssmenu ul ul:visible').slideUp('normal');
+				checkElement.slideDown('normal');
+				}
+				if($(this).closest('li').find('ul').children().length == 0) {
+				return true;
+				} else {
+				return false;	
+				}		
+				});
 });
 </script>
-<script type="text/javascript">
+<style>
+body{
+}
+</style>
+<!--<script type="text/javascript">
 
 $(window).load(function() {
 		$(".loader").fadeOut("slow");
 		})
 
-</script>
+</script>-->
 </head>
 <body style="" >
-<div class="loader" style="background-color:black">
+<!--<div class="loader" style="background-color:black">
 
 	<div id="row xs-2">
 		<p style="text-align:center;">
 		<img src = "images/k15.png" style="width:60%;height:12%" style="vertical-align:middle">
 
 		<br/><br/>
-		<!--<img src="./assets/img/spin.GIF" style="vertical-align:middle">-->
+		<img src="./assets/img/spin.GIF" style="vertical-align:middle">
 
 		<br/><br/>
 
 		<span style="color:white">Loading..</span>
 		</p>
 	</div>
-</div>
-<div class="meny" id="sidebar" ng-controller="EventsCtrl">
-	<div ng-repeat="events in eventslist" >
-	<h2>Navigation</h2>
-	<div id='cssmenu' >
-		<ul ng-repeat="category in events">
-			
-			<li class='active'><a class="id1" href="javascript:void(0)" >{{ category.name }}</a>
-			
-			<ul class="meny1" ng-repeat="hello in category">
-				<li ng-repeat="event in hello track by $index"><a href='#'><span>{{event.name}}</span></a></li>
-			</ul>
-			</li>
-		</ul>
-	</div >
-</div>
+</div>-->
+<div class="meny" id="sidebar" >
 </div>
 
 <div class="meny-arrow" id="sidearrow">
@@ -114,14 +117,14 @@ $(window).load(function() {
 	<header>
 		<div class="row">
 			<img src="images/ceg.png" height=50px width=200px style="margin-top:-40px;margin-left:40px">
-			<img  src="images/k15.png" height=120px width=450px style="margin-top:-30px; margin-left:180px;">
-			<img src="images/unesco.png" height=100px width=230px style="margin-top:-40px;margin-left:150px;">
+			<img  src="images/k15.png" height=120px width=400px style="margin-top:-5px; margin-left:200px;">
+			<img src="images/unesco.png" height=100px width=230px style="margin-top:-40px;margin-left:200px;">
 		</div>
 	</header>
 	<div class="main-div">
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-9">
+			<!--<div class="col-md-1"></div>-->
+			<div class="col-md-10">
 				<div class="view-container">
 					<div ng-view class="view-frame"></div>
 				</div>
