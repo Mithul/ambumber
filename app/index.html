@@ -77,6 +77,10 @@ $(document).ready(function(){
 				return false;	
 				}		
 				});
+		$(document).on('click','.mh-menu li',function(){
+				$('.mh-menu li').removeClass('active');
+				$(this).addClass("active");
+				});
 });
 </script>
 <style>

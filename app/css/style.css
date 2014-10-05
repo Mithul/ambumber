@@ -168,7 +168,7 @@ body{
 	height: 57px;
 	border-right: 1px solid #ddd;
 }
-.mh-menu li:hover a{
+.mh-menu li a{
 	background: rgba(225,239,240, 0.4);
 }
 .mh-menu li a span{
@@ -222,7 +222,7 @@ body{
 	transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
 	background:rgba(255,255,255,0.8);
 }
-.mh-menu li:hover .content{
+.mh-menu li.active .content{
 	left: 300px;
 	opacity: 1;
 }
