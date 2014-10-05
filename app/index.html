@@ -22,13 +22,15 @@
 <script src="js/controllers.js"></script>
 <script src="js/filters.js"></script>
 <script src="js/services.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/meny.js"></script>
 <script src="js/3dsub.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 		var url = window.location.href;
-		var localurl='http://localhost:8000/app/'
+		var localurl='http://localhost:8000/app/';
+		$("#myCarousel").carousel();
 		if(url.indexOf('events')>-1)
 		{
 		$('#sidebar').load('partials/events_side.html');
