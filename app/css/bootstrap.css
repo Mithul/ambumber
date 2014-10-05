@@ -6466,3 +6466,12 @@ border-bottom:1px dashed black;
 background:rgba(0,0,0,0.01);
 z-index:-1;
 }
+
+.f2{
+	color:rgba(255,255,255,0.7);
+}
+.f3{
+	text-align:justify;
+	padding-top:30px;
+
+}

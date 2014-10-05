@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/3dnavbar.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/style.css">
 
 
@@ -26,6 +27,8 @@
 <script src="js/meny.js"></script>
 <script src="js/3dsub.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.flip.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 		var url = window.location.href;
@@ -40,7 +43,7 @@ $(document).ready(function(){
 		$('#sidebar').load('partials/workshops_side.html');
 		}
 		else{
-		$('#sidebar').load('partials/quicklinks.html')
+		$('#sidebar').load('partials/quicklinks.html');
 		}
 		$('#eventslink').click(function(){
 			$('#sidebar').load('partials/events_side.html');
@@ -87,6 +90,7 @@ $(document).ready(function(){
 </script>
 <style>
 body{
+	font-family: 'Droid Serif', serif;
 }
 </style>
 <!--<script type="text/javascript">
