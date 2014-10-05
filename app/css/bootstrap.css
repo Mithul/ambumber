@@ -6253,10 +6253,10 @@ width: auto;
 margin:0px;
 padding: 0px;
 list-style: none;
-padding-right: 26px;
+padding-right: 20px;
 }
 .dock ul li {
-width: auto;
+width: 80px;
 height: auto;
 display: inline-block;
 bottom: 0;
@@ -6266,7 +6266,7 @@ margin-top: -43px;
 .dock ul li a {
 display: block;
 height: 100px;
-width: 95px;
+width: 90px;
 position: relative;
 -webkit-transition-property: width, height,margin-top;
 -webkit-transition-duration: 0.5s;
@@ -6286,7 +6286,7 @@ position: absolute;
 bottom: 0;
 left: 0;
 border: none;
-padding: 0px 0px 0px 20px;
+padding: 0px 0px 0px 0px;
 }
 /*.dock_left{
 width: 31px;
