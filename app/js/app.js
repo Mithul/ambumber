@@ -27,6 +27,9 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/workshops.html',
         controller: 'EventsCtrl'
       }).
+      when('/lectures', {
+        templateUrl: 'partials/guest.html'
+      }).
       when('/events/hello', {
         templateUrl: 'partials/event.html',
       }).
