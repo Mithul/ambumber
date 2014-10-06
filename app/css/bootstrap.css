@@ -6252,7 +6252,7 @@ th {
 		margin:0px;
 		padding: 0px;
 		list-style: none;
-		padding-right: 20px;
+		padding-right: 0px;
 	}
 	.dock ul li {
 		width: 80px;
@@ -6275,8 +6275,8 @@ th {
 		-moz-transition-duration: 0.5s;
 	}
 	.dock ul li a:hover {
-		width: 150px;
-		height: 150px;
+		width: 120px;
+		height: 120px;
 		margin-top: -50px;
 	}
 	.dock ul li a img {
@@ -6330,12 +6330,12 @@ a[data-title]{
 }
 
 a[data-title]:hover:after{
-	background: rgba(255,255,255,.2);
+	background: rgba(0,0,0,.8);
 	border-radius: 5px;
 	bottom: 140px;
 	color: #fff;
 	content: attr(data-title);
-	left: 10%;
+	left: 0%;
 	padding: 5px 15px;
 	position: absolute;
 	z-index: 98;
@@ -6345,7 +6345,7 @@ a[data-title]:hover:after{
 
 a[data-title]:hover:before{
 	border: solid;
-	border-color: #333 transparent;
+	border-color: rgba(0,0,0,0.8) transparent;
 	border-width: 6px 6px 0 6px;
 	bottom: 134px;
 	content: "";
