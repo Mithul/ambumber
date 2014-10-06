@@ -162,24 +162,24 @@ body{
 .mh-menu li{
 	width: 200px;
 	background:rgba(255,255,255,0.8);
-	border-bottom:1px solid rgba(0,0,0,0.3);
+	border-radius:5px;
+	margin-bottom:10px;
 }
 .mh-menu li a{
 	display: block;
 	width: 200px;
 	padding: 0px 10px;
-	text-align: right;
+	text-align: center;
+	line-height:57px;
 	position: relative;
 	z-index: 10;
 	height: 57px;
-	border-right: 1px solid #ddd;
 }
 .mh-menu li a{
 	color:rgba(0,0,0,0.5);
 }
 .mh-menu li a span{
 	font-weight: 400;
-	font-style: italic;
 	font-size: 28px;
 	font-family: 'Alegreya SC', Georgia, serif;
 	-webkit-transition: color 0.2s linear;
@@ -192,6 +192,7 @@ body{
 .mh-menu li a:hover{
 	text-decoration:none;
 	color:black;
+	background:white;
 }
 .mh-menu li:hover span{
 }
