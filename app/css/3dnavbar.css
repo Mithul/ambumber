@@ -21,7 +21,7 @@ body {
 	padding: 20px;
 	margin-top:-20px;
 	overflow: hidden;
-	background: #2a2a5a;
+	background: #820000;
 	color: #fff;
 
 	-webkit-box-sizing: border-box;
@@ -59,7 +59,7 @@ body {
 		left: 14px;
 		top: 50%;
 		margin-top: -16px;
-		border-left: 16px solid #ba7070;
+		border-left: 16px solid #a30000;
 	}
 	.meny-right .meny-arrow {
 		right: 14px;
