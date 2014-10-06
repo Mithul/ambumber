@@ -18,6 +18,7 @@ body {
 	}
 .meny {
 	display: none;
+	height:100%;
 	padding: 20px;
 	margin-top:-20px;
 	overflow: hidden;
@@ -37,6 +38,10 @@ body {
 			list-style: none;
 			font-size: 20px;
 			padding: 3px 10px;
+		}
+		.meny ul li a:hover{
+			text-decoration:none;
+			
 		}
 			.meny ul li:before {
 				margin-right: 5px;
