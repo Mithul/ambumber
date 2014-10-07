@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/3dnavbar.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/style.css">
 
 
@@ -86,11 +86,15 @@ $(document).ready(function(){
 				$('.mh-menu li').removeClass('active');
 				$(this).addClass("active");
 				});
+
 });
+	function videoEnded(){
+		$('#introVideo').fadeOut();
+	}
 </script>
 <style>
 body{
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Droid Serif', serif;
 	background:url('images/amb.gif');
 }
 
@@ -117,6 +121,10 @@ $(window).load(function() {
 </script>-->
 </head>
 <body style="" >
+<video autoplay style="width:100%;position:absolute;z-index:1000" id="introVideo" onended="videoEnded()">
+  <source src="intro.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <!--<div class="loader" style="background-color:black">
 
 	<div id="row xs-2">

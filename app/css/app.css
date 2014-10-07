@@ -1,5 +1,9 @@
 /* app css stylesheet */
 
+html, body{
+  height: 100% !important;
+}
+
 body {
   padding-top: 20px;
 }
