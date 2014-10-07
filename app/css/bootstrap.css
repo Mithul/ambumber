@@ -6318,7 +6318,7 @@ th {
 	position:fixed;
 	left:0%;
 	width:100%;
-	top:580px;
+	bottom:3%;
 	z-index:100;
 }
 body{
@@ -6332,7 +6332,7 @@ a[data-title]{
 a[data-title]:hover:after{
 	background: rgba(0,0,0,.8);
 	border-radius: 5px;
-	bottom: 140px;
+	bottom: 120px;
 	color: #fff;
 	content: attr(data-title);
 	left: 0%;
@@ -6347,7 +6347,7 @@ a[data-title]:hover:before{
 	border: solid;
 	border-color: rgba(0,0,0,0.8) transparent;
 	border-width: 6px 6px 0 6px;
-	bottom: 134px;
+	bottom: 114px;
 	content: "";
 	left: 55%;
 	position: absolute;

@@ -10,7 +10,6 @@ body {
 
 .id1{
 	color: #fff;
-	font-family: "georgia";
 	font-size: 24px;
 }
 .id1:hover {
@@ -21,8 +20,7 @@ body {
 	height:100%;
 	padding: 20px;
 	overflow: hidden;
-	background: #820000;
-	color: #fff;
+	color: rgba(255,255,255,0.8);
 
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -33,7 +31,7 @@ body {
 	}
 		.meny ul li {
 			display: inline-block;
-			width: 200px;
+			width: 220px;
 			list-style: none;
 			font-size: 20px;
 			padding: 3px 10px;
@@ -63,7 +61,7 @@ body {
 		left: 14px;
 		top: 50%;
 		margin-top: -16px;
-		border-left: 16px solid #a30000;
+		border-left: 16px solid #7d0000;
 	}
 	.meny-right .meny-arrow {
 		right: 14px;
@@ -136,8 +134,7 @@ body {
 	display: none;
 	padding: 3px;
 	overflow: none;
-	background: #476bb2;
-	color: #a30000;
+	background: rgba(255,255,255,0.05);
 
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -148,19 +145,18 @@ body {
 	}
 		.meny1  li {
 			display: inline-block;
-			width: 130px;
+			width: 170px;
 			list-style: none;
 			padding: 3px 10px;
 		}
 			.meny1  li:before {
-				content: '-';
+				content: '';
 				margin-right: 5px;
-				color: rgba( 255, 255, 255, 0.2 );
+				color: rgba( 255, 255, 255, 0.9 );
 			}
 			.meny1  li a{
 				font-size: 16px;
-				font-family: "georgia";
-				color: #000;
+				color: #fff;
 			}
 
 
