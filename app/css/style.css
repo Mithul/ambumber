@@ -181,7 +181,6 @@ body{
 .mh-menu li a span{
 	font-weight: 400;
 	font-size: 28px;
-	font-family: 'Alegreya SC', Georgia, serif;
 	-webkit-transition: color 0.2s linear;
 	-moz-transition: color 0.2s linear;
 	-o-transition: color 0.2s linear;
@@ -193,12 +192,14 @@ body{
 	text-decoration:none;
 	color:black;
 	background:white;
+	border-radius:5px;
+	text-shadow:2px;
 }
 .mh-menu li:hover span{
 }
 .mh-menu li .content{
 	position: absolute;
-	color:rgba(0,0,0,0.6);
+	color:rgba(0,0,0,0.8);
 	font-size:1.1em;
 	min-height:300px;
 	min-width:600px;
@@ -220,4 +221,5 @@ body{
 .mh-menu li.active .content{
 	left: 300px;
 	opacity: 1;
+	
 }
